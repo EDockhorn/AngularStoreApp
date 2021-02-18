@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './admin/login/login.component';
+import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { EnderecoComponent } from './institucional/endereco/endereco.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
@@ -11,5 +12,6 @@ export const rootRouterConfig : Routes = [
     {path: 'contato' , component: ContatoComponent},
     {path: 'sobre' , component: SobreComponent},
     {path: 'endereco', component: EnderecoComponent},
-    {path: 'login', component: LoginComponent}
+    {path: 'login', component: LoginComponent},
+    {path: 'databinding', component: DataBindingComponent}
 ];

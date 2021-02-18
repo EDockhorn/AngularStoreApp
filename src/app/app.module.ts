@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './navegacao/menu/menu.component';
@@ -12,6 +13,8 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
 import { EnderecoComponent } from './institucional/endereco/endereco.component';
 import { LoginComponent } from './admin/login/login.component';
+import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+
 
 @NgModule({
   declarations: [
@@ -22,10 +25,13 @@ import { LoginComponent } from './admin/login/login.component';
     SobreComponent,
     ContatoComponent,
     EnderecoComponent,
-    LoginComponent    
+    LoginComponent,
+    DataBindingComponent
+    
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash: false})]
   ],
   providers: [
