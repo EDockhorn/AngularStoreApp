@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './navegacao/menu/menu.component';
@@ -14,6 +15,10 @@ import { rootRouterConfig } from './app.routes';
 import { EnderecoComponent } from './institucional/endereco/endereco.component';
 import { LoginComponent } from './admin/login/login.component';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+import { ProductService } from './products/products.service';
+import { ListaProdutoComponent } from './products/lista-produtos/lista-produto.component';
+
+
 
 
 @NgModule({
@@ -26,15 +31,18 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
     ContatoComponent,
     EnderecoComponent,
     LoginComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ListaProdutoComponent
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash: false})]
   ],
   providers: [
+    ProductService,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]

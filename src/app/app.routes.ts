@@ -5,6 +5,7 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { EnderecoComponent } from './institucional/endereco/endereco.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { HomeComponent } from './navegacao/home/home.component';
+import { ListaProdutoComponent } from './products/lista-produtos/lista-produto.component';
 
 export const rootRouterConfig : Routes = [
     {path: '' , redirectTo:'/home', pathMatch: 'full'},
@@ -13,5 +14,6 @@ export const rootRouterConfig : Routes = [
     {path: 'sobre' , component: SobreComponent},
     {path: 'endereco', component: EnderecoComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'databinding', component: DataBindingComponent}
+    {path: 'databinding', component: DataBindingComponent},
+    {path: 'products', component: ListaProdutoComponent}
 ];
