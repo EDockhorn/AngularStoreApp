@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 import { Product } from '../product';
 import { ProductService } from '../products.service';
+
 
 @Component({
   selector: 'app-lista-produto',
@@ -13,6 +15,7 @@ export class ListaProdutoComponent implements OnInit {
   constructor(private produtoService: ProductService) { }
 
   public products!: Product[];
+  public rememberLoginControl = new FormControl();
 
   ngOnInit() {
     this.produtoService.obterProdutos()
