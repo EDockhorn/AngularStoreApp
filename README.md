@@ -1,4 +1,3 @@
-MeuProjeto
 This project was generated with Angular CLI version 11.1.4.
 
 Development server
